@@ -1,6 +1,6 @@
 base randompage2
 author Szymon Olewniczak
-email
+email solewniczak@rid.pl
 date 2017-02-06
 name dtable
 desc The goal of the plugin is the same function as MediaWiki's Random Page.
