@@ -2,6 +2,6 @@ base randompage2
 author Szymon Olewniczak
 email solewniczak@rid.pl
 date 2017-09-29
-name dtable
+name randompage2
 desc Select a random dokuwiki page
 url http://www.dokuwiki.org/plugin:randompage2
