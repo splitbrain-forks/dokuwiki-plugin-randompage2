@@ -4,9 +4,6 @@
  * @author     Szymon Olewniczak
  */
 
-if(!defined('DOKU_INC')) die();
-
-
 class action_plugin_randompage2 extends DokuWiki_Action_Plugin {
 
 
@@ -29,7 +26,16 @@ class action_plugin_randompage2 extends DokuWiki_Action_Plugin {
             if(!page_exists($page)) continue;
             if(isHiddenPage($page)) continue;
             if (auth_quickaclcheck($page)) {
-                send_redirect(wl($page, '', true, '&'));
+                send_redirect(wl(
+                    $page,
+                    [
+                        'utm_source' => 'internal',
+                        'utm_medium' => 'referral',
+                        'utm_content' => 'randompage',
+                    ],
+                    true,
+                    '&'
+                ));
             }
         }
     }
